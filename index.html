@@ -775,6 +775,44 @@
     line-height: 1.7;
   }
 
+  /* VIDEO SHOWCASE */
+  .video-showcase {
+    background: var(--ink);
+    padding: 80px 0;
+    text-align: center;
+    border-top: 1px solid rgba(250, 250, 247, 0.06);
+  }
+  .video-showcase h2 {
+    color: var(--paper);
+    margin: 12px auto 36px;
+    max-width: 24ch;
+  }
+  .video-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    aspect-ratio: 16 / 9;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  }
+  .video-wrapper iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+  @media (max-width: 640px) {
+    .video-showcase {
+      padding: 60px 0;
+    }
+    .video-wrapper {
+      border-radius: 8px;
+    }
+  }
+
   /* FINAL CTA */
   .final-cta {
     background: var(--brand-red);
@@ -930,6 +968,23 @@
       <div class="hero-art">
         <img src="HERO_-_holding_phone_with_CleanTrail.png" alt="VM superhero presenting the CleanTrail portal on a phone, showing before and after duct cleaning photos" width="600" height="600">
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- VIDEO SHOWCASE -->
+<section class="video-showcase" aria-labelledby="video-title">
+  <div class="container">
+    <span class="section-label">See It In Action</span>
+    <h2 id="video-title">Watch CleanTrail™ work</h2>
+    <div class="video-wrapper">
+      <iframe
+        src="https://www.youtube-nocookie.com/embed/VTd2ylLs_M8"
+        title="VM CleanTrail demonstration video"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+        loading="lazy"></iframe>
     </div>
   </div>
 </section>
